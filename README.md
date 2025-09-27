@@ -84,7 +84,7 @@ JWT is used for securing the API using **djangorestframework-simplejwt**.
 ##  API Endpoints & Documentation
 Swagger/OpenAPI available at:
 
-`http://127.0.0.1:8000`
+``` bash http://127.0.0.1:8000 ```
 
 ---
 
