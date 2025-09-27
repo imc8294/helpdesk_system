@@ -109,3 +109,18 @@ Tickets are escalated based on their **priority** if not updated within a specif
   - Ticket creator
   - All Admins
 - Managed using **Celery** and **Celery Beat**
+---
+
+##  Sample User Credentials
+
+For testing purposes, here are sample login credentials for each user role:
+
+| Role     | Email             | Password |
+|----------|-------------------|----------|
+| Admin    | admin@gmail.com   | 123456   |
+| Agent    | imc@gmail.com     | 123456   |
+| User     | imc8294@gmail.com | 123456   |
+
+ These credentials are for demo purposes only. Ensure you change them.
+
+---
