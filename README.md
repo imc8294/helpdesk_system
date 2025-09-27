@@ -53,7 +53,7 @@ python manage.py runserver
 
 ### 6. Start Celery Worker & Beat (Run in separate terminals)
 ```bash
-# Celery worker (Windows users must use --pool=solo)
+# Celery worker 
 celery -A helpdesk_system worker --loglevel=info
 
 # Celery Beat for periodic tasks
