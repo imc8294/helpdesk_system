@@ -21,7 +21,7 @@ A backend API for a simple Helpdesk & Ticket Management System built with **Djan
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/imc8294/helpdesk_system.git
-cd helpdesk-system
+cd helpdesk_system
 ```
 
 ### 2. Create and Activate Virtual Environment
