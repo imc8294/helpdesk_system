@@ -102,17 +102,20 @@ class TicketReportingView(APIView):
         responses={
             200: openapi.Response(
                 description="Reporting of tickets based on their status and assignment of last 7 days.",
-                schema={
-                    'opened': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of opened tickets'),
-                    'resolved': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of resolved tickets'),
-                    'escalated': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of escalated tickets'),
-                    'assigned': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of assigned tickets'),
-                    'unassigned': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of unassigned tickets'),
-                    'total': openapi.Schema(type=openapi.TYPE_INTEGER, description='Total number of tickets'),
-                }
+                schema=openapi.Schema(
+                    type=openapi.TYPE_OBJECT,
+                    properties={
+                        'opened': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of opened tickets'),
+                        'resolved': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of resolved tickets'),
+                        'escalated': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of escalated tickets'),
+                        'assigned': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of assigned tickets'),
+                        'unassigned': openapi.Schema(type=openapi.TYPE_INTEGER, description='Number of unassigned tickets'),
+                        'total': openapi.Schema(type=openapi.TYPE_INTEGER, description='Total number of tickets'),
+                    }
+                )
             ),
-            400: "Bad Request",
-            403: "You Don't Permission to view tickets",
+            400: openapi.Response(description="Bad Request"),
+            403: openapi.Response(description="You don't have permission to view tickets"),
         }
     )
     def get(self, request):
